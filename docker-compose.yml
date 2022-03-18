@@ -19,7 +19,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - /home/ict/data/config:/config
+      - /var/data/config:/config
     environment:
         PUID: 1000
         PGID: 1000
