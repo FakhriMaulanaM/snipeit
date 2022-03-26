@@ -1,4 +1,4 @@
-version: "3"
+version: "3.3"
 
 services:
   db-service:
@@ -17,7 +17,7 @@ services:
   snipe-it:
     image: snipe/snipe-it
     ports:
-      - "80:80"
+      - "6666:80"
     volumes:
       - /var/data/config:/config
     environment:
@@ -29,7 +29,9 @@ services:
         DB_USERNAME: root
         DB_PASSWORD: dbjaya
         APP_KEY: base64:5U/KPKw1GN/Rz0fWYO/4FsSOqjmjvDAQzMCqwcAqstc=
-        APP_URL: http://192.168.100.132
+        APP_URL: http://192.168.60.162
+        APP_ENV: production
+        APP_DEBUG: false
     restart: on-failure
     depends_on:
       - db-service
