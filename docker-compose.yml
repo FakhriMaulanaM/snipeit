@@ -8,7 +8,7 @@ services:
     volumes:
       - snipesql-vol:/var/lib/mysql
     environment:
-        MYSQL_USER: root
+        #MYSQL_USER: root
         MYSQL_DATABASE: snipe
         MYSQL_PASSWORD: dbjaya
         MYSQL_ROOT_PASSWORD: dbjaya
