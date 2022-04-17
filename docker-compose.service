@@ -5,9 +5,10 @@ After=docker.service
 
 [Service]
 WorkingDirectory=/home/ict/snipeit/snipeit
-ExecStart=/usr/local/bin/docker-compose up
+ExecStart=/usr/local/bin/docker-compose up --remove-orphans
 ExecStop=/usr/local/bin/docker-compose down
 TimeoutStartSec=0
+RestartSec=5s
 Restart=on-failure
 StartLimitIntervalSec=60
 StartLimitBurst=3
