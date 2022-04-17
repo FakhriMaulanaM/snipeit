@@ -17,6 +17,7 @@ rm -rf /etc/nginx/nginx.conf
 cp nginx.conf /etc/nginx/nginx.conf
 cp web.conf /etc/nginx/conf.d/web.conf
 cp docker-compose.service /etc/systemd/system
+chmod +x /etc/systemd/system/docker-compose.sevice
 systemctl daemon-reload 
 systemctl start docker-compose.service
 systemctl status docker-compose.service
